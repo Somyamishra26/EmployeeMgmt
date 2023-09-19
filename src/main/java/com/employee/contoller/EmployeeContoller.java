@@ -26,9 +26,16 @@ public class EmployeeContoller {
     return "data added";
 	}
 	
+
 	@GetMapping(value="/{name}")
 	public List<Employee> getEmployeeByName(@PathVariable String name ){
 		 return employeeRepository.findByName(name);
+		 
+	}
+	
+	@GetMapping(value="/{fname}")
+	public List<Employee> getEmployeeByFName(@PathVariable String fname ){
+		 return employeeRepository.findByName(fname);
 		 
 	}
 }
