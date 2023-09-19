@@ -32,10 +32,5 @@ public class EmployeeContoller {
 		 return employeeRepository.findByName(name);
 		 
 	}
-	
-	@GetMapping(value="/{fname}")
-	public List<Employee> getEmployeeByFName(@PathVariable String fname ){
-		 return employeeRepository.findByName(fname);
-		 
-	}
+
 }
